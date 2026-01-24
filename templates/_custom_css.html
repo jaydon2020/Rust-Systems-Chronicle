@@ -1,0 +1,244 @@
+<style>
+    /* 
+   * Kanagawa Theme System 
+   */
+
+    :root {
+        /* Base Palette - Kanagawa Lotus (Light Mode) */
+        --kanagawa-bg: #F2ECBC;
+        --kanagawa-bg-dark: #E5E6C5;
+        --kanagawa-fg: #545464;
+        --kanagawa-fg-muted: #717C7C;
+        --kanagawa-select: #C9CBD1;
+        --kanagawa-accent: #4D699B;
+        --kanagawa-red: #C84053;
+        --kanagawa-green: #6F894E;
+
+        /* Abstract Mapping for Light Mode */
+        --k-bg: var(--kanagawa-bg);
+        --k-bg-block: var(--kanagawa-bg-dark);
+        --k-fg: var(--kanagawa-fg);
+        --k-fg-pale: var(--kanagawa-fg-muted);
+        --k-highlight: var(--kanagawa-select);
+        --k-link: var(--kanagawa-accent);
+        --k-border: var(--kanagawa-accent);
+    }
+
+    /* Override for Dark Mode (Kanagawa Wave) */
+    body.dark {
+        --kanagawa-bg: #1F1F28;
+        --kanagawa-bg-dark: #16161D;
+        --kanagawa-fg: #DCD7BA;
+        --kanagawa-fg-muted: #C8C093;
+        --kanagawa-select: #2D4F67;
+        --kanagawa-accent: #7E9CD8;
+        --kanagawa-red: #C34043;
+        --kanagawa-green: #76946A;
+
+        /* Abstract Mapping for Dark Mode */
+        --k-bg: var(--kanagawa-bg);
+        --k-bg-block: var(--kanagawa-bg-dark);
+        --k-fg: var(--kanagawa-fg);
+        --k-fg-pale: var(--kanagawa-fg-muted);
+        --k-highlight: var(--kanagawa-select);
+        --k-link: var(--kanagawa-accent);
+        --k-border: var(--kanagawa-accent);
+    }
+
+    /* Apply Variables */
+    body {
+        --main-font: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+        --code-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+        --homepage-max-width: 768px;
+        --main-max-width: 768px;
+        --avatar-size: 60px;
+        --font-size: 16px;
+        --line-height: 1.75;
+        --img-border-radius: 0px;
+        --detail-border-radius: 0px;
+        --dark-mode-img-brightness: 0.75;
+        --dark-mode-chart-brightness: 0.75;
+        --inline-code-border-radius: 2px;
+        --block-code-border-radius: 0px;
+
+        /* Color Mapping */
+        --bg-color: var(--k-bg);
+        --text-color: var(--k-fg);
+        --text-pale-color: var(--k-fg-pale);
+        --primary-color: var(--k-link);
+        --primary-pale-color: rgba(126, 156, 216, 0.2);
+        --primary-decoration-color: var(--k-highlight);
+        --text-decoration-color: var(--k-fg-pale);
+        --highlight-mark-color: var(--k-highlight);
+
+        --inline-code-bg-color: var(--k-bg-block);
+        --block-code-border-color: var(--k-border);
+
+        /* Accents */
+        --callout-note-color: var(--k-link);
+        --callout-tip-color: var(--kanagawa-green);
+        --callout-caution-color: var(--kanagawa-red);
+        --callout-important-color: var(--k-link);
+        --callout-warning-color: var(--k-link);
+    }
+
+    body pre {
+        background-color: var(--k-bg-block) !important;
+    }
+
+    ::selection {
+        background: var(--k-highlight);
+        color: var(--k-fg);
+    }
+
+    /* 
+   * Updated Tag & Meta Styling (Plain Text, Same Line)
+   */
+    .post-list .post {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: nowrap;
+        gap: 1rem;
+    }
+
+    .post-list .post .meta {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-left: auto;
+        white-space: nowrap;
+    }
+
+    .tags-container {
+        display: flex;
+        gap: 8px;
+    }
+
+    .post-tag {
+        font-size: 0.9em;
+        padding: 0;
+        border-radius: 0;
+        background-color: transparent !important;
+        color: var(--k-fg-pale);
+        font-style: italic;
+    }
+
+    .post-tag::before {
+        content: "#";
+        opacity: 0.6;
+        margin-right: 1px;
+    }
+
+    body.dark .post-tag {
+        background-color: transparent !important;
+        color: var(--kanagawa-fg-muted);
+    }
+
+    .post-list .post .date {
+        color: var(--k-fg-pale);
+        min-width: 90px;
+        text-align: right;
+    }
+
+    @media (max-width: 480px) {
+        .post-tag {
+            display: none;
+        }
+    }
+
+    /*
+   * Code Annotations (Strict Inline & Floating)
+   */
+
+    /*
+   * Tabbed Content (Kanagawa Theme - Starlight Style)
+   */
+    .tab-container {
+        margin: 1.5rem 0;
+        border: 1px solid #2D4F67;
+        /* Wave Blue border for the whole container */
+        border-radius: 6px;
+        background-color: var(--k-bg-block);
+        overflow: hidden;
+        /* Ensure content doesn't spill out */
+    }
+
+    .tab-nav {
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom: 1px solid #2D4F67;
+        /* Separator */
+        background-color: rgba(0, 0, 0, 0.2);
+        /* Slightly darker header */
+        padding: 0 0.5rem;
+    }
+
+    .tab-btn {
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid transparent;
+        margin-bottom: -1px;
+        /* Sit on the line */
+        padding: 0.6rem 1rem;
+
+        /* Text Colors */
+        color: #727169;
+        /* Muted */
+        font-family: var(--main-font);
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .tab-btn:hover {
+        color: var(--k-fg-pale);
+    }
+
+    .tab-btn.active {
+        color: #DCD7BA;
+        /* Fuji White */
+        border-bottom-color: #7E9CD8;
+        /* Crystal Blue */
+        background-color: transparent;
+    }
+
+    .tab-content {
+        padding: 0;
+        /* Flush content */
+        background-color: var(--k-bg-block);
+    }
+
+    .tab-panel {
+        animation: fadeIn 0.2s ease-in-out;
+    }
+
+    /* Starlight Style: Flush Code Blocks */
+    .tab-panel pre {
+        margin: 0 !important;
+        border: none !important;
+        border-radius: 0 !important;
+        padding: 0.5rem !important;
+        /* Minimal padding for readability, but "flush" */
+        background-color: transparent !important;
+    }
+
+    /* Regular content padding */
+    .tab-panel>*:not(pre) {
+        padding: 1rem;
+        margin: 0;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(5px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
