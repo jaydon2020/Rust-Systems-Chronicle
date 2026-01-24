@@ -11,7 +11,7 @@ footer = false
 name = "CS220 Student"
 id = "cs220"
 bio = "Documenting my journey through KAIST CS220 System Programming."
-avatar = "img/avatar.webp"
+avatar = "img/Gemini_Generated_Image_crop.png"
 
 links = [
     { name = "GitHub", icon = "github", url = "https://github.com/example" },
