@@ -11,7 +11,7 @@ footer = true
 name = "Jian De"
 id = "jiande"
 bio = "Curating the best of Rust systems engineering. Deep diving into memory safety, performance primitives, and concurrent systems."
-avatar = "img/Gemini_Generated_Image_crop.png"
+avatar = "img/rust_systems_chronicle_logo.png"
 
 links = [
     { name = "GitHub", icon = "github", url = "https://github.com/jaydon2020" },
@@ -25,7 +25,7 @@ recent_more_text = "more »"
 date_format = "%b %-d, %Y"
 +++
 
-## The Rustacean Journey 👋
+## Rust Systems Chronicle 👋
 
 Welcome. This portfolio is a curated chronicle of my obsession with high-performance, safe systems engineering. My goal is to bridge the gap between academic rigour and industrial excellence.
 
