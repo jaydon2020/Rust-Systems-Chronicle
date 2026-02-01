@@ -8,15 +8,7 @@ lang = 'en'
 footer = true
 
 # Profile information
-name = "Rust Systems Chronicle"
-id = "jaydon2020"
-bio = "Curating the best of Rust systems engineering. Deep diving into memory safety, performance primitives, and concurrent systems."
-avatar = "img/rust_systems_chronicle_logo.png"
-
-links = [
-    { name = "GitHub", icon = "github", url = "https://github.com/jaydon2020/Rust-Systems-Chronicle" },
-    { name = "Email", icon = "email", url = "mailto:jiande2020@gmail.com" },
-]
+# (Data now pulled globally from config.toml)
 
 # Show a few recent posts in home page
 recent = true
