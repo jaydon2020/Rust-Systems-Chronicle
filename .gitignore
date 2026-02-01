@@ -1,6 +1,6 @@
 # Zola
-public/
-resources/
+docs/public/
+docs/resources/
 
 # OS
 .DS_Store
