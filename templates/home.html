@@ -78,7 +78,7 @@ lang %}
                     {{ icon | safe }}
                 </a>
                 {% endfor %}
-                {% if not section.extra.footer and not config.extra.force_theme %}
+                {% if not config.extra.force_theme %}
                 {% set moon_icon = load_data(path="icon/moon.svg") %}
                 {% set sun_icon = load_data(path="icon/sun.svg") %}
                 <button id="theme-toggle" aria-label="theme switch">

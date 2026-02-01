@@ -8,9 +8,9 @@ lang = 'en'
 footer = true
 
 # Profile information
-name = "CS220 Student"
-id = "cs220"
-bio = "Documenting my journey through KAIST CS220 System Programming."
+name = "Rustacean Journey"
+id = "Jian De"
+bio = "Documenting my journey through Learning Rust."
 avatar = "img/Gemini_Generated_Image_crop.png"
 
 links = [
