@@ -1,5 +1,5 @@
 +++
-title = "Safe Arithmetic: Exploring Wrapping Operations in Rust"
+title = "Lab 01: Safe Arithmetic"
 date = 2026-02-02
 draft = false
 
