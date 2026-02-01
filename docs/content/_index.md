@@ -14,8 +14,8 @@ bio = "Documenting my journey through Learning Rust."
 avatar = "img/Gemini_Generated_Image_crop.png"
 
 links = [
-    { name = "GitHub", icon = "github", url = "https://github.com/example" },
-    { name = "Email", icon = "email", url = "mailto:student@example.com" },
+    { name = "GitHub", icon = "github", url = "https://github.com/jaydon2020" },
+    { name = "Email", icon = "email", url = "mailto:jiande2020@gmail.com" },
 ]
 
 # Show a few recent posts in home page
