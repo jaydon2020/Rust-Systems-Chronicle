@@ -1,5 +1,5 @@
 base_url = "https://example.com"
-title = "CS220 Journey"
+title = "Rustacean Journey"
 description = "My solutions and learnings from KAIST System Programming."
 default_language = "en"
 theme = "serene"

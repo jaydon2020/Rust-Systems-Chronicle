@@ -1,10 +1,11 @@
 +++
-title = "About Me"
+title = "serene::about"
 template = "prose.html"
-path = "about"
 
 [extra]
-lang = 'en'
+title = "About"
+subtitle = "A separate section page example"
+reaction = true
 +++
 
 ## Hello! I'm a CS220 Student.
