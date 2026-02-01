@@ -5,7 +5,7 @@ template = 'home.html'
 lang = 'en'
 
 # Show footer in home page
-footer = false
+footer = true
 
 # Profile information
 name = "CS220 Student"
