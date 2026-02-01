@@ -2,6 +2,11 @@
 docs/public/
 docs/resources/
 
+# Rust
+**/target/
+**/*.rs.bk
+rustfmt.toml
+
 # OS
 .DS_Store
 Thumbs.db
