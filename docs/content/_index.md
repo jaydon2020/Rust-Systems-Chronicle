@@ -10,7 +10,7 @@ footer = true
 # Profile information
 name = "Jian De"
 id = "jiande"
-bio = "Mastering the art of safe systems. Exploring Rust through KAIST CS220, with a sights set on Concurrent Programming (CS431)."
+bio = "Curating the best of Rust systems engineering. Deep diving into memory safety, performance primitives, and concurrent systems."
 avatar = "img/Gemini_Generated_Image_crop.png"
 
 links = [
@@ -25,12 +25,13 @@ recent_more_text = "more »"
 date_format = "%b %-d, %Y"
 +++
 
-## Hello, I'm Jian De. 👋
+## The Rustacean Journey 👋
 
-Welcome to my technical portfolio. This site is a living document of my journey through systems programming at **KAIST**. 
+Welcome. This portfolio is a curated chronicle of my obsession with high-performance, safe systems engineering. My goal is to bridge the gap between academic rigour and industrial excellence.
 
-Currently, I am deep-diving into **CS220: Programming Principles**, where I'm mastering the foundations of the **Rust** programming language—focusing on memory safety, ownership, and building robust system primitives. 
+Here, I document my deep dives into the **Rust ecosystem**:
+- **Academic Foundations**: Distilling insights from world-class lectures (like KAIST CS220/431 and MIT 6.824).
+- **Seminal Literature**: Reflections on the books and papers that define the modern systems landscape.
+- **Industry Trends**: Key takeaways from global conferences like RustConf and EuroRust.
 
-As I solidify these concepts, I'm preparing for the next challenge: **CS431: Concurrent Programming**, where I'll be applying these skills to high-performance, parallel systems.
-
-Stay tuned as I share my labs, projects, and the occasional "Aha!" moment from the world of low-level code.
+Whether exploring memory safety primitives or the nuances of lock-free concurrency, I aim to maintain the highest standards of technical clarity.
