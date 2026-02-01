@@ -8,13 +8,13 @@ docs/resources/
 rustfmt.toml
 
 # OS
-.DS_Store
-Thumbs.db
-ehthumbs.db
-desktop.ini
+**/.DS_Store
+**/Thumbs.db
+**/ehthumbs.db
+**/desktop.ini
 
 # Editors
-.vscode/
-.idea/
-*.swp
-*.swo
+**/.vscode/
+**/.idea/
+**/*.swp
+**/*.swo
