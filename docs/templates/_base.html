@@ -20,9 +20,9 @@
 <body class="{% block page %}{% endblock page%}{% if config.extra.force_theme == 'dark' %} dark{% endif %}">
     {% if not config.extra.force_theme %}
     <script>
-        const theme = localStorage.getItem('theme');
+        const theme = sessionStorage.getItem('theme');
         const match = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        // Check localStorage first, then default to Dark Mode (per current site style)
+        // Check sessionStorage first, then default to Dark Mode (per current site style)
         if (theme === 'dark' || (!theme)) {
             document.body.classList.add('dark');
         } else if (theme === 'light') {

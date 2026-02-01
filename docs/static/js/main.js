@@ -12,7 +12,7 @@ function enableThemeToggle() {
             hlLink.href = hlLink.href.replace(/(giallo-)(dark|light)(\.css)/, "$1" + theme + "$3");
         }
 
-        localStorage.setItem("theme", theme);
+        sessionStorage.setItem("theme", theme);
         toggleGiscusTheme(theme);
     }
 
@@ -24,7 +24,7 @@ function enableThemeToggle() {
     function initGiscusTheme(evt) {
         if (evt.origin !== 'https://giscus.app') return;
         if (!(typeof evt.data === 'object' && evt.data.giscus)) return;
-        toggleGiscusTheme(localStorage.getItem("theme") || (preferDark.matches ? "dark" : "light"));
+        toggleGiscusTheme(sessionStorage.getItem("theme") || (preferDark.matches ? "dark" : "light"));
         window.removeEventListener('message', initGiscusTheme);
     }
 
@@ -32,22 +32,22 @@ function enableThemeToggle() {
 
     themeToggles.forEach(toggle => {
         toggle.addEventListener('click', () => {
-            const currentTheme = localStorage.getItem("theme") || (document.body.classList.contains('dark') ? "dark" : "light");
+            const currentTheme = sessionStorage.getItem("theme") || (document.body.classList.contains('dark') ? "dark" : "light");
             toggleTheme(currentTheme == "dark" ? "light" : "dark");
         });
     });
 
     preferDark.addEventListener("change", e => {
         // Only auto-toggle if the user hasn't manually set a preference
-        if (!localStorage.getItem("theme")) {
+        if (!sessionStorage.getItem("theme")) {
             toggleTheme(e.matches ? "dark" : "light");
         }
     });
 
     // Initial check on page load (complements the inline script in _base.html)
-    if (localStorage.getItem("theme") == "dark") {
+    if (sessionStorage.getItem("theme") == "dark") {
         toggleTheme("dark");
-    } else if (localStorage.getItem("theme") == "light") {
+    } else if (sessionStorage.getItem("theme") == "light") {
         toggleTheme("light");
     }
 }
