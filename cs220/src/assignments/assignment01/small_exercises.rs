@@ -8,12 +8,10 @@
 
 /// Adds two unsigned words. If overflow happens, just wrap around.
 pub fn add(lhs: usize, rhs: usize) -> usize {
-    // https://doc.rust-lang.org/std/primitive.usize.html#method.wrapping_add
-    lhs.wrapping_add(rhs)
+    todo!()
 }
 
 /// Subtracts two unsigned words. If overflow happens, just wrap around.
 pub fn sub(lhs: usize, rhs: usize) -> usize {
-    // https://doc.rust-lang.org/std/primitive.usize.html#method.wrapping_sub
-    lhs.wrapping_sub(rhs)
+    todo!()
 }
