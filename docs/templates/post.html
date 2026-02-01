@@ -25,8 +25,8 @@ endif -%}
 
 {% block head %}
 {% if config.markdown.highlighting.style == "class" %}
-<link id="hl" rel="stylesheet" type="text/css" href="/giallo-{% if config.extra.force_theme == " dark" %}dark{% else
-    %}light{% endif %}.css" />
+<link id="hl" rel="stylesheet" type="text/css"
+    href="{{ get_url(path='giallo-' ~ (config.extra.force_theme if config.extra.force_theme else 'light' ) ~ '.css') }}" />
 {% endif %}
 
 {# CHANGED: Check section.extra.math as fallback #}
@@ -92,8 +92,6 @@ endif -%}
         {% endif %}
     </aside>
     <main>
-        {% include "_nav.html" %}
-
         {{ macros::back_link(path = get_url(path=section.path)) }}
 
         <div>
@@ -165,7 +163,7 @@ endif -%}
 {% endblock content %}
 
 {% block script %}
-<script src="/js/lightense.min.js"></script>
+<script src="{{ get_url(path='js/lightense.min.js') }}"></script>
 {% if page.extra.mermaid %}
 <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
