@@ -1,6 +1,6 @@
 function enableThemeToggle() {
-    const themeToggle = document.querySelector('#theme-toggle');
-    if (!themeToggle) return;
+    const themeToggles = document.querySelectorAll('#theme-toggle');
+    if (themeToggles.length === 0) return;
     const hlLink = document.querySelector('link#hl');
     const preferDark = window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -30,9 +30,11 @@ function enableThemeToggle() {
 
     window.addEventListener('message', initGiscusTheme);
 
-    themeToggle.addEventListener('click', () => {
-        const currentTheme = localStorage.getItem("theme") || (document.body.classList.contains('dark') ? "dark" : "light");
-        toggleTheme(currentTheme == "dark" ? "light" : "dark");
+    themeToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const currentTheme = localStorage.getItem("theme") || (document.body.classList.contains('dark') ? "dark" : "light");
+            toggleTheme(currentTheme == "dark" ? "light" : "dark");
+        });
     });
 
     preferDark.addEventListener("change", e => {

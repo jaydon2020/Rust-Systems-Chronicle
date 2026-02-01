@@ -17,7 +17,7 @@
     {% include "_head_extend.html" %}
 </head>
 
-<body class="{% block page %}{% endblock page%}{% if config.extra.force_theme == " dark" %} dark{% endif %}">
+<body class="{% block page %}{% endblock page%}{% if config.extra.force_theme == 'dark' %} dark{% endif %}">
     {% if not config.extra.force_theme %}
     <script>
         const theme = localStorage.getItem('theme');
