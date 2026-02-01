@@ -17,8 +17,9 @@
 
 {% block head %}
 {% if config.markdown.highlighting.style == "class" %}
-<link id="hl" rel="stylesheet" type="text/css"
-  href="{{ get_url(path='giallo-' ~ (config.extra.force_theme if config.extra.force_theme else 'light' ) ~ '.css') }}" />
+{% if config.extra.force_theme %}{% set theme_name = config.extra.force_theme %}{% else %}{% set theme_name = "dark"
+%}{% endif %}
+<link id="hl" rel="stylesheet" type="text/css" href="{{ get_url(path='giallo-' ~ theme_name ~ '.css') }}" />
 {% endif %}
 {% if section.extra.math %}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
