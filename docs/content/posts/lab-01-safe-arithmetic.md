@@ -4,8 +4,8 @@ date = 2026-02-02
 draft = false
 
 [taxonomies]
-categories = ["Systems Programming"]
-tags = ["Rust", "Safety", "CS220"]
+categories = ["CS220"]
+tags = ["Rust"]
 
 [extra]
 lang = "en"

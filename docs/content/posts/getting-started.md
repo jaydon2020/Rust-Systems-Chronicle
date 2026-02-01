@@ -1,7 +1,7 @@
 +++
 title = "Project Guide: Getting Started & Customization"
 date = 2026-01-24
-taxonomies.categories = ["Guide"]
+taxonomies.categories = ["Zola"]
 taxonomies.tags = ["zola", "documentation", "workflow"]
 summary = "A comprehensive guide to the CS220 Portfolio customizations, setup instructions, and how to write new content."
 +++
